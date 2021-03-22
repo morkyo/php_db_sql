@@ -23,7 +23,16 @@ $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':task', $task, PDO::PARAM_STR);
 $status = $stmt->execute();
 
-
+//４．データ登録処理後
+if ($status==false) {
+  //エラーがある場合エラーオブジェクト取得して表示
+  $error = $stmt->errorInfo();
+  exit("QueryError:".$error[2]);
+} else {
+  //index.phpへリダイレクト
+  header("Location: index.php");
+  exit;
+}
 
 
 
