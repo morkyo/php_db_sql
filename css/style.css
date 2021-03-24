@@ -1,4 +1,18 @@
 @import url("//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap");
+input {
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+button {
+  background: none;
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
 html {
   font-size: 62.5%;
 }
@@ -43,20 +57,12 @@ h2 {
   display: block;
   width: 100%;
   padding: 20px 10px;
-  border: none;
-  outline: 0;
-  -webkit-appearance: none;
-  appearance: none;
   font-size: 1.5rem;
 }
 .insert-btn button {
   display: block;
   padding-left: 20px;
-  background: none;
-  border: none;
-  outline: 0;
-  -webkit-appearance: none;
-  appearance: none;
+
   font-size: 2rem;
   color: #777;
   cursor: pointer;
@@ -91,4 +97,26 @@ sub ul li i {
   margin-right: 10px;
   font-size: 1.8rem;
   color: #777;
+}
+.update {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.update input {
+  display: block;
+  width: 80%;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5rem;
+}
+.update button {
+  display: block;
+  width: 160px;
+  padding: 10px 0;
+  border-radius: 3px;
+  background: #33b295;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }
