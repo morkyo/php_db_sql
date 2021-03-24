@@ -71,8 +71,21 @@ h2 {
   background: #f6f6f6;
 }
 sub {
-  height: 600px;
+  height: 100vh;
   width: 290px;
   border-right: 1px solid #eaeaea;
   background: #f4f4f4;
+}
+sub ul {
+  margin-top: 60px;
+}
+sub ul li {
+  padding: 15px 20px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+sub ul li i {
+  margin-right: 10px;
+  font-size: 1.8rem;
+  color: #777;
 }
