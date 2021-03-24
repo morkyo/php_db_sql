@@ -25,8 +25,6 @@ if ($status==false) {
   //Selectデータの数だけ自動でループ
   $row = $stmt->fetch();
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -35,13 +33,26 @@ if ($status==false) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>TODO</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="css/style.css?<?= filemtime( "{$_SERVER['DOCUMENT_ROOT']}/php_db_sql/css/style.css" ) ?>">
 </head>
 <body>
-  <form action="update.php" method="post">
-  <input type="text" name="task" value="<?= $row["task"] ?>">
-  <input type="hidden" name="id" value="<?= $row["id"] ?>">
-  <input type="submit" value="送信">
-</form>
+<?php include("header.php");?>
+<div class="container">
+  <sub>
+  <?php include("side.php");?>
+  </sub>
+  <main>
+    <h2>Update ...</h2>
+    <form action="update.php" method="post">
+      <div class="update">
+        <input type="text" name="task" value="<?= $row["task"] ?>">
+        <input type="hidden" name="id" value="<?= $row["id"] ?>">
+        <button type="submit">更新する</button>
+      </div>
+    </form>
+  </main>
+</div>
 </body>
 </html>
