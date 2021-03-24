@@ -61,13 +61,16 @@ h2 {
   color: #777;
   cursor: pointer;
 }
-.select_area p {
+.select_area a {
+  display: block;
   padding: 20px;
   border-bottom: 1px solid #ddd;
   box-sizing: border-box;
   font-size: 1.5rem;
+  color: #333;
+  text-decoration: none;
 }
-.select_area p:hover {
+.select_area p a:hover {
   background: #f6f6f6;
 }
 sub {
