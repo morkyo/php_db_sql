@@ -1,0 +1,78 @@
+@import url("//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap");
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+}
+header {
+  height: 48px;
+  background: #33b295;
+  text-align: center;
+}
+h1 {
+  line-height: 48px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  width: calc(100% - 290px);
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+h2 {
+  margin: 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #33b295;
+}
+.insert-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.insert-btn input {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 1.5rem;
+}
+.insert-btn button {
+  display: block;
+  padding-left: 20px;
+  background: none;
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 2rem;
+  color: #777;
+  cursor: pointer;
+}
+.select_area p {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+}
+.select_area p:hover {
+  background: #f6f6f6;
+}
+sub {
+  height: 600px;
+  width: 290px;
+  border-right: 1px solid #eaeaea;
+  background: #f4f4f4;
+}
