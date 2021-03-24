@@ -20,7 +20,7 @@
     <div class="insert_area">
     <form action="insert.php" method="post">
       <div class="insert-btn">
-      <button type="submit"><i class="fas fa-plus"></i></button>
+        <button type="submit"><i class="fas fa-plus"></i></button>
         <input type="text" name="task" placeholder="タスクの作成">
       </div>
     </form>

@@ -7,10 +7,11 @@ try {
 }
 
 //データ登録SQL
-$stmt = $pdo->prepare("SELECT * FROM todo_table");
+$sql = "SELECT * FROM todo_table";
+$stmt = $pdo->prepare($sql);
 $status = $stmt->execute();
 
-//データ表示
+//データ登録処理後
 $view="";
 if ($status==false) {
   //エラー処理
@@ -19,7 +20,11 @@ if ($status==false) {
 }else {
   //Selectデータの数だけ自動でループ
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<p>".$result["task"]."</p>";
+    $view .= "<p>";
+    $view .= '<a href="u_view.php?id='.$result["id"].'">';
+    $view .= $result["task"];
+    $view .= '</a>';
+    $view .= "</p>";
   }
 }
 ?>

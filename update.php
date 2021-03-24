@@ -1,13 +1,7 @@
 <?php
-
-//エラーチェック
-if (!isset($_POST["task"]) || $_POST["task"] == "") {
-  exit("Error");
-}
-
-//入力値変数化
+//POSTで取得
+$id = $_POST["id"];
 $task = $_POST["task"];
-var_dump($task);
 
 //DB接続
 try {
@@ -17,9 +11,10 @@ try {
 }
 
 //データ登録SQL
-$sql = "INSERT INTO todo_table(id, task)VALUES(NULL, :task)";
+$sql = "UPDATE todo_table SET task = :task WHERE id = :id";
 $stmt = $pdo->prepare($sql);
 $stmt->bindValue(':task', $task, PDO::PARAM_STR);
+$stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
 //データ登録処理後
@@ -32,7 +27,5 @@ if ($status == false) {
   header("Location: index.php");
   exit;
 }
-
-
 
 ?>
