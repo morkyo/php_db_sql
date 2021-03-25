@@ -21,8 +21,11 @@ if ($status==false) {
   //Selectデータの数だけ自動でループ
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
     $view .= "<p>";
-    $view .= '<a href="u_view.php?id='.$result["id"].'">';
+    $view .= '<a href="u_view.php?id='.$result["id"].'" class="task_val">';
     $view .= $result["task"];
+    $view .= '</a>';
+    $view .= '<a href="delete.php?id='.$result["id"].'" class="delete" title="完了済みにする">';
+    $view .= '<i class="fas fa-check"></i>';
     $view .= '</a>';
     $view .= "</p>";
   }
