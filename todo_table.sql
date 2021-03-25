@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- ホスト: 127.0.0.1
--- 生成日時: 2021-03-24 16:13:28
+-- 生成日時: 2021-03-25 10:45:56
 -- サーバのバージョン： 10.4.17-MariaDB
 -- PHP のバージョン: 8.0.2
 
@@ -41,11 +41,12 @@ CREATE TABLE `todo_table` (
 --
 
 INSERT INTO `todo_table` (`id`, `task`, `memo`, `term`, `finish`, `priority`) VALUES
-(1, '電話する', '', '0000-00-00 00:00:00', 0, 0),
 (2, '動画を見る', '', '0000-00-00 00:00:00', 0, 0),
-(3, 'PHPを調べる', '', '0000-00-00 00:00:00', 0, 0),
+(3, 'PHPを学ぶ', '', '0000-00-00 00:00:00', 0, 0),
 (4, 'WIFI契約', '', '0000-00-00 00:00:00', 0, 0),
-(5, 'MAC調べる', '', '0000-00-00 00:00:00', 0, 0);
+(6, '薬局へ行く', '', '0000-00-00 00:00:00', 0, 0),
+(7, '牛乳とコーヒー買う', '', '0000-00-00 00:00:00', 0, 0),
+(8, '携帯の支払い', '', '0000-00-00 00:00:00', 0, 0);
 
 --
 -- ダンプしたテーブルのインデックス
@@ -65,7 +66,7 @@ ALTER TABLE `todo_table`
 -- テーブルの AUTO_INCREMENT `todo_table`
 --
 ALTER TABLE `todo_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
